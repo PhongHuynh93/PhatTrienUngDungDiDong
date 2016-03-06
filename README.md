@@ -15,5 +15,5 @@ Các bước phát triển: <br />
 
 <h2>1. Google Map API</h2>
 Phát triển ứng dụng android sử dụng Google map API. <br />
-Chức năng của ứng dụng: người dùng nhập vào kinh độ và vĩ độ, sau đó ứng dụng sẽ thêm marker tương ứng với vị trí đó, đồng thời xuất ra địa chỉ ứng với tọa độ đó.
+Chức năng của ứng dụng: người dùng nhập vào kinh độ và vĩ độ, sau đó ứng dụng sẽ thêm marker tương ứng với vị trí đó, đồng thời xuất ra địa chỉ ứng với tọa độ đó. <br />
 [img]https://farm2.staticflickr.com/1710/25454894551_24cc7d15a9_z.jpg[/img]
