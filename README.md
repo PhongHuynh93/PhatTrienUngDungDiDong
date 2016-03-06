@@ -16,4 +16,4 @@ Các bước phát triển: <br />
 <h2>1. Google Map API</h2>
 Phát triển ứng dụng android sử dụng Google map API. <br />
 Chức năng của ứng dụng: người dùng nhập vào kinh độ và vĩ độ, sau đó ứng dụng sẽ thêm marker tương ứng với vị trí đó, đồng thời xuất ra địa chỉ ứng với tọa độ đó. <br />
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/59466970@N04/25454894551/in/dateposted-public/" title="2016-03-06 07.39.02"><img src="https://farm2.staticflickr.com/1710/25454894551_24cc7d15a9_c.jpg" width="450" height="800" alt="2016-03-06 07.39.02"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<a data-flickr-embed="true"  href="https://www.flickr.com/photos/59466970@N04/25454894551/in/dateposted-public/" title="2016-03-06 07.39.02"><img src="https://farm2.staticflickr.com/1710/25454894551_24cc7d15a9.jpg" width="281" height="500" alt="2016-03-06 07.39.02"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
