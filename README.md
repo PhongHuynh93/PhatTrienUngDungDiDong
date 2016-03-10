@@ -9,6 +9,7 @@ Vũ Duy Trúc 51204191<br />
 Tên đề tài: Phát triển ứng dụng nhận dạng chữ viết tay.<br />
 Các bước phát triển: <br />
 + Tìm hiểu life cycle của 1 Activity.<br />
++ Tìm hiểu life cycle của 1 Fragment: http://developer.android.com/training/basics/fragments/index.html <br />
 + Tìm hiểu về PreferenceActivity, giúp ta lưu setting của ứng dụng: <br />
 +   http://rominirani.com/android-preferences-tutorial/ <br />
 +   http://www.learn-android-easily.com/2013/09/preferenceactivity-in-android-example.html <br />
