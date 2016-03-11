@@ -1,0 +1,5 @@
+c:\users\vannam\documents\visual studio 2012\Projects\ConvertCurrency\ConvertCurrency\bin\ConvertCurrency.dll
+c:\users\vannam\documents\visual studio 2012\Projects\ConvertCurrency\ConvertCurrency\bin\ConvertCurrency.pdb
+c:\users\vannam\documents\visual studio 2012\Projects\ConvertCurrency\ConvertCurrency\obj\Debug\ConvertCurrency.csprojResolveAssemblyReference.cache
+c:\users\vannam\documents\visual studio 2012\Projects\ConvertCurrency\ConvertCurrency\obj\Debug\ConvertCurrency.dll
+c:\users\vannam\documents\visual studio 2012\Projects\ConvertCurrency\ConvertCurrency\obj\Debug\ConvertCurrency.pdb

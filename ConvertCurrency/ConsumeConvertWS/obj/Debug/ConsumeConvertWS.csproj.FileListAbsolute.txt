@@ -1,0 +1,11 @@
+C:\Users\VANNAM\Documents\Visual Studio 2012\Projects\ConvertCurrency\ConsumeConvertWS\obj\Debug\ConsumeConvertWS.csprojResolveAssemblyReference.cache
+C:\Users\VANNAM\Documents\Visual Studio 2012\Projects\ConvertCurrency\ConsumeConvertWS\obj\Debug\ConsumeConvertWS.Form1.resources
+C:\Users\VANNAM\Documents\Visual Studio 2012\Projects\ConvertCurrency\ConsumeConvertWS\obj\Debug\ConsumeConvertWS.Properties.Resources.resources
+C:\Users\VANNAM\Documents\Visual Studio 2012\Projects\ConvertCurrency\ConsumeConvertWS\obj\Debug\ConsumeConvertWS.csproj.GenerateResource.Cache
+C:\Users\VANNAM\Documents\Visual Studio 2012\Projects\ConvertCurrency\ConsumeConvertWS\bin\Debug\ConsumeConvertWS.exe.config
+C:\Users\VANNAM\Documents\Visual Studio 2012\Projects\ConvertCurrency\ConsumeConvertWS\bin\Debug\ConsumeConvertWS.exe
+C:\Users\VANNAM\Documents\Visual Studio 2012\Projects\ConvertCurrency\ConsumeConvertWS\bin\Debug\ConsumeConvertWS.pdb
+C:\Users\VANNAM\Documents\Visual Studio 2012\Projects\ConvertCurrency\ConsumeConvertWS\bin\Debug\ConvertCurrency.dll
+C:\Users\VANNAM\Documents\Visual Studio 2012\Projects\ConvertCurrency\ConsumeConvertWS\bin\Debug\ConvertCurrency.pdb
+C:\Users\VANNAM\Documents\Visual Studio 2012\Projects\ConvertCurrency\ConsumeConvertWS\obj\Debug\ConsumeConvertWS.exe
+C:\Users\VANNAM\Documents\Visual Studio 2012\Projects\ConvertCurrency\ConsumeConvertWS\obj\Debug\ConsumeConvertWS.pdb
