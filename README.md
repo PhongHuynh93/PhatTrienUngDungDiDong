@@ -17,6 +17,8 @@ Các bước phát triển: <br />
 + Tìm hiểu cách xác định vị trí hiện tại của mình trên bản đồ.<br />
 + Tìm hiểu về bottom sheet chứa thông tin về địa điểm mình cần đến.<br />
 + Tìm hiểu cách vẽ lộ trình bằng cách phương tiện khác nhau lên bản đồ.<br />
++ Tìm hiểu cách áp dụng Firebase để tạo một ứng dụng chat tích hợp trong bản đồ. <br />
++ Tìm hiểu cách lưu lại lộ trình và chia sẽ nó. <br />
 
 <h2>1. Google Map API</h2>
 Phát triển ứng dụng android sử dụng Google map API. <br />
