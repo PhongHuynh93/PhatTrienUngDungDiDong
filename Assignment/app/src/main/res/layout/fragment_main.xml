@@ -1,0 +1,101 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/map_coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--map-->
+    <org.osmdroid.views.MapView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!--toolbar-->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:cardBackgroundColor="@color/colorAccent">
+
+                <EditText
+                    android:id="@+id/search_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/start_point"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textColorHint="@color/colorPrimaryDark"/>
+
+            </android.support.v7.widget.CardView>
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+    <!--&lt;!&ndash;search&ndash;&gt;-->
+    <!--<android.support.v7.widget.CardView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="top|center_horizontal"-->
+    <!--android:layout_marginLeft="@dimen/searchbar_marginleft"-->
+    <!--android:layout_marginRight="@dimen/searchbar_marginleft"-->
+    <!--android:layout_marginTop="@dimen/searchbar_margintop">-->
+
+    <!--<fragment-->
+    <!--android:id="@+id/autocomplete_fragment"-->
+    <!--android:name="com.google.android.gms.location.places.ui.SupportPlaceAutocompleteFragment"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"/>-->
+    <!--</android.support.v7.widget.CardView>-->
+
+
+
+    <!--bottom sheets:  -->
+    <FrameLayout
+        android:id="@+id/map_bottom_sheets"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:layout_behavior="android.support.design.widget.BottomSheetBehavior"/>
+
+
+    <!--fab nằm ở cuối layout + neo tại top|right của bottom sheet-->
+    <!--direction fab-->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_direction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@android:drawable/ic_menu_directions"
+        android:tint="@color/colorWhite"
+        app:backgroundTint="@color/colorBlue"
+        app:layout_anchor="@id/map_bottom_sheets"
+        app:layout_anchorGravity="top|start"/>
+    <!--here location fab-->
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_my_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@android:drawable/ic_menu_mylocation"
+        android:tint="@color/colorPrimaryDark"
+        app:backgroundTint="@color/colorWhite"
+        app:layout_anchor="@id/map_bottom_sheets"
+        app:layout_anchorGravity="top|end"/>
+</android.support.design.widget.CoordinatorLayout>
