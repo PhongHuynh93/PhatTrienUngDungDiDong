@@ -45,6 +45,8 @@ public class MainActivityFragment extends BaseFragment {
     public static final String TAG = "MainActivityFragment";
     private AddressResultReceiver mResultReceiver;
     private Place mPlace;
+    private Location touchLocation;
+    private String addressOutput;
 
     public static MainActivityFragment newInstance() {
         MainActivityFragment mainActivityFragment = new MainActivityFragment();
@@ -60,6 +62,10 @@ public class MainActivityFragment extends BaseFragment {
         super.onAttach(context);
     }
 
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -75,33 +81,10 @@ public class MainActivityFragment extends BaseFragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
         super.makeMapDefaultSetting();
 
         // receive address at a location.
         mResultReceiver = new AddressResultReceiver(new Handler());
-
-
-//        final SupportPlaceAutocompleteFragment autocompleteFragment = (SupportPlaceAutocompleteFragment)
-//                getChildFragmentManager().findFragmentById(R.id.autocomplete_fragment);
-//        autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
-//            @Override
-//            public void onPlaceSelected(Place place) {
-//                mPlace = place;
-//                ((BottomSheetFragment) getChildFragmentManager().findFragmentById(R.id.map_bottom_sheets)).addPlaceToBottomSheet(place);
-//                // remove marker on the map, center at that point and add marker.
-//                clearMap();
-//                Location placeLocation = new Location("Test");
-//                placeLocation.setLatitude(place.getLatLng().latitude);
-//                placeLocation.setLongitude(place.getLatLng().longitude);
-//                setMarkerAtLocation(placeLocation, Constant.MARKER);
-//            }
-//
-//            @Override
-//            public void onError(Status status) {
-//
-//            }
-//        });
 
         declareSearch();
 
@@ -143,6 +126,17 @@ public class MainActivityFragment extends BaseFragment {
             }
         });
 
+    }
+
+    // go to another fragment with marker place, when click a dialog
+    public void goToDirectionFragment() {
+        if (touchLocation != null && addressOutput != null) {
+            getActivity().getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.root_layout, DirectionActivityFragment.newInstance(addressOutput, touchLocation.getLatitude(), touchLocation.getLongitude()), Constant.DIRECTION_FRAGMENT)
+                    .addToBackStack(null)
+                    .commit();
+        }
     }
 
     @Override
@@ -199,10 +193,11 @@ public class MainActivityFragment extends BaseFragment {
         // make search bar and bottom sheet contain address
 
         // draw marker
-        Location touchLocation = new Location("touchLocation");
+        touchLocation = new Location("touchLocation");
         touchLocation.setLatitude(p.getLatitude());
         touchLocation.setLongitude(p.getLongitude());
-        setMarkerAtLocation(touchLocation, Constant.MARKER);
+
+        setMarkerAtLocationWithDialog(touchLocation, Constant.MARKER, getActivity().getSupportFragmentManager());
 
         startIntentService(touchLocation);
         return true;
@@ -251,8 +246,9 @@ public class MainActivityFragment extends BaseFragment {
         }
     }
 
-    // display address in bottom sheet
+    // display address in bottom sheet + add to search
     private void displayAddressOutput(String addressOutput) {
+        this.addressOutput = addressOutput;
         Log.i(TAG, "displayAddressOutput: " + addressOutput);
         BottomSheetFragment bottomSheetFragment = (BottomSheetFragment) getChildFragmentManager().findFragmentById(R.id.map_bottom_sheets);
         BottomSheetBehavior<View> bottomSheetBehavior = bottomSheetFragment.getBottomSheetBehavior();
@@ -262,6 +258,9 @@ public class MainActivityFragment extends BaseFragment {
             bottomSheetBehavior.setPeekHeight(369);
             bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
         }
+
+        EditText searchBar = (EditText) getActivity().findViewById(R.id.search_bar);
+        searchBar.setText(addressOutput);
     }
 
 
@@ -311,12 +310,6 @@ public class MainActivityFragment extends BaseFragment {
                 // Get the user's selected place from the Intent.
                  mPlace = PlaceAutocomplete.getPlace(getContext(), data);
                 ((EditText) getActivity().findViewById(R.id.search_bar)).setText(mPlace.getName());
-//                // set startPlace
-//                Location startPlace = new Location("location");
-//                startPlace.setLatitude(mPlace.getLatLng().latitude);
-//                startPlace.setLongitude(mPlace.getLatLng().longitude);
-//                setStartPlace(startPlace);
-
 
                 ((BottomSheetFragment) getChildFragmentManager().findFragmentById(R.id.map_bottom_sheets)).addPlaceToBottomSheet(mPlace);
 //                // remove marker on the map, center at that point and add marker.
