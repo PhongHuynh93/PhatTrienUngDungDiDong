@@ -5,7 +5,7 @@ Lê Hoàng Minh Hiếu 51201077<br />
 Phan Văn Nam 1420066<br />
 Vũ Duy Trúc 51204191<br />
 
-<h1>Assignment 1</h1>
+<h1>Assignment</h1>
 Tên đề tài: Phát triển ứng dụng điều hướng dựa vào OpenStreetMap<br />
 Các bước phát triển: <br />
 + Tìm hiểu life cycle của 1 Activity.<br />
