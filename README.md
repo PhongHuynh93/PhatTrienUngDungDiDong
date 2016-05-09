@@ -20,7 +20,8 @@ Các bước phát triển: <br />
 + Tìm hiểu cách áp dụng Firebase để tạo một ứng dụng chat tích hợp trong bản đồ. <br />
 + Tìm hiểu cách lưu lại lộ trình và chia sẽ nó. <br />
 
-Báo cáo đề tài:
+<h3>Báo cáo đề tài: </h3>
+
 <a data-flickr-embed="true"  href="https://www.flickr.com/photos/59466970@N04/26870851096/in/dateposted-public/" title="Screenshot 2016-05-09 10.32.56"><img src="https://farm8.staticflickr.com/7002/26870851096_bf2f9e2813_b.jpg" width="512" height="723" alt="Screenshot 2016-05-09 10.32.56"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 
 <h2>1. Google Map API</h2>
